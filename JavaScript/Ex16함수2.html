@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const, let은 블록 레벨 스코프(Block Level Scope)로 
+        // 블록({}) 안에 선언하면 범위를 벗어날 수 없다.
+        // const, let은 호이스팅이 발생하지 않으므로, 선언 전에 변수 사용 불가
+
+        // 함수 표현식 : 호이스팅 발생 X
+        // => const나 let 변수에 할당하기 때문에, 초기화 전 함수 호출 불가능, 반드시 초기화 된 후
+        
+        // 함수 표현식
+        const func = function() {
+            console.log('함수 표현식');
+        }
+
+        func();
+
+
+        // 화살표 함수
+        const func2 = () => {
+            console.log('화살표 함수');
+        }
+
+        func2();
+
+
+        // 화살표 함수 예제
+        const greet = (name) => {
+            console.log(`안녕하세요 저는 ${name}입니다 :)`);
+        }
+
+        greet('오세원');
+        
+        // function 키워드 생략 / 매개변수가 1개일 경우 소괄호 생략 가능
+        // {} 내 하나의 문장이며, 반환해야 하는 값인 경우 return과 {} 생략 가능
+        const greet2 = name => `안녕하세요. 저는 ${name}입니다^^`
+        console.log(greet2('오세원'));
+
+
+
+
+    </script>
+</body>
+</html>

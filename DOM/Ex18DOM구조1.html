@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1Tag">DOM 사용하기</h1>
+
+    <ul>
+        <li>김밥</li>
+        <li>라면</li>
+        <li>떡볶이</li>
+    </ul>
+
+    <script>
+        // document -> 문서
+        // . -> 접근을 의미함
+        // get -> 가지고 올거야
+        // Element -> 요소
+        // ById -> 아이디로
+
+        let h1Element = document.getElementById('h1Tag');
+        console.log(h1Element);
+
+        // NodeList(유사배열)를 다루는 방법 -> queryselectorAll()
+        const liElements = document.querySelectorAll('li');
+        console.log(liElements);
+
+        
+        // for문 적용
+        for(let i = 0; i < liElements.length; i++) {
+            console.log(liElements[i].textContent);
+        }
+
+    </script>
+</body>
+</html>

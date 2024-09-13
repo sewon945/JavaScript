@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 특징
+        // {key:value} 형식으로 정보 저장
+        // {key:value}에 값을 추가할 경우 쉼표(,)로 구분해야 한다.
+
+        // 사용자 정의 객체 - 객체 정의 방법
+        // : 중괄호{}로 표기, key와 value로 구성, key는 속성(property)라고도 표현,
+        //   value는 기본자료형, 참조자료형 모두 값으로 정의 가능, 객체의 값 접근은 마침표(.) 사용
+        
+        // 객체 구조 : {key1 : value1 , k2 : v2, .....}
+        // key : 객체의 속성(property)
+        // value : 속성의 값 / 기본자료형, 참조자료형
+
+        // let 객체변수명 = {
+        //     변수명 : 데이터,
+        //     키1 : 값1 ,
+        //     속성2 : 값2,
+        //     ... : ... ,
+        //     키n : 값n,
+        // }
+        // 객체변수명.키
+
+
+
+        // 객체 생성
+        let person = {
+            name : '오세원',
+            age : 24,
+            female : true,
+            favorite : {
+                food : 'pizza',
+                drink : 'coffee'
+            },
+            epl : ['박지성', '손흥민', '황희찬']
+        }
+
+        // 객체 접근
+        console.log(person);
+        console.log('이름 : ', person.name);
+        console.log('나이 : ', person.age);
+        console.log('여성 : ', person.female);
+        console.log('축구선수 : ', person.epl[1]);
+
+        // 속성값 변경
+        person.name = '박상권';
+        console.log('이름변경 : ', person.name);
+        console.log(person);
+
+        // 속성값 추가
+        person.height = 46;
+        console.log(person);
+
+
+
+        // 내장객체(Date)
+        let today = new Date();
+        console.log(today);
+
+        // 년, 월, 일
+        let year = today.getFullYear();
+        let month = today.getMonth()+1;
+        let date = today.getDate();
+        console.log(year, month, date);
+
+
+    </script>
+</body>
+</html>

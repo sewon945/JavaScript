@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>jQuery 활용해보기</h1>
+    <h2>jQuery Style</h2>
+    <button id="h1">h1change</button>
+    <button id="h2">h2change</button>
+
+    <script>
+        // JS => .style.속성=value
+        // JQ => .css(스타일속성,값)
+        // ex) $('li').css('color','red');  - li 요소들의 글자색을 빨간색으로 변경
+        // - li(명령대상)는 내가 지정해서 쓰는 것 => HTML요소를 jQuery객체로 반환
+        // - ('color','red') 매개변수 => css로 반환
+
+        $('#h1').click(()=>{
+            $('h1').css('color', 'red');
+        })
+
+        // 여러 개의 스타일을 변경하는 방법
+        // 'color' : 'background-color' 변경해주기
+        $('#h2').click(()=>{
+            $('h2').css({
+                'color':'gray',
+                'background-color':'orange'
+            })
+        })
+
+        
+    </script>
+</body>
+</html>

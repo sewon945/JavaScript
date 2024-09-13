@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Hello Js -->
+    <script>
+        // script 태그 : 자바스크립트 언어를 작성할 수 있는 태그
+        // 주석 : ctrl + /
+
+
+        // 1. 입력 : prompt()
+        // - 사용자가 키보드로 입력한 값을 문자열로 반환해주는 기능
+        // - 반환해주는 값을 출력문과 같이 사용
+
+
+        // 2. 출력 : console.log() => F12(개발자도구창 열기) -> console 탭 클릭 -> 출력내용 확인
+    //    console.log(prompt('이름을 입력해주세요'));     // 입력문 - prompt('이름을 입력해주세요'); -> 출력문 안에 입력문 넣기
+    
+
+        // 3. 입력 : confirm()
+        // - 사용자가 확인 또는 취소 버튼을 눌렀을 때 참/거짓(boolean)에 대한 결과를 반환해주는 기능
+    //    console.log(confirm('비밀번호를 변경하시겠습니까?'));
+
+
+        // 4. 출력 : alert()
+    //    alert('환영합니다~');
+
+
+        // 5. 출력 : document.write()
+        // - document : 현재문서 (HTML)
+        // - write() : 현재 문서 내에서 작성하는 기능
+        // - document 안에 HTML 태그 + 문자열을 같이 사용할 수 있다.
+    //    document.write('<h1>안녕하세요 :)</h1>');
+
+
+        // 변수 특징 : 데이터를 담아주는 순간 자료형 결정
+
+
+        // prompt() -> 변수에 담기 -> 출력문 안에 변수를 넣어서 문자열 + 변수
+        let name = prompt('이름을 입력해주세요~!');
+        console.log('반갑습니다~' + name + '님! 즐거운 하루 되세요!');   // F12 열어서 console에 결과화면 뜸
+
+
+</script>
+</body>
+</html>

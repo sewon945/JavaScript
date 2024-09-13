@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>jQuery Start</p>
+    <button id="textBtn">Text</button>
+    <button id="htmlBtn">Html</button>
+
+    <script>
+        // jQuery / $ : jquery를 의미하면서 접근, 사용할 수 있는 식별자
+        // $(요소명|선택자).동작메소드()
+        // => $(...) 안에 선택자를 넣어 원하는 HTML요소를 선택하여 jQuery객체로 반환
+    
+        //  1. p태그에 접근
+        let valJS = document.querySelector('p');
+        console.log(valJS);
+        let valJQ = $('p');
+        console.log(valJQ);
+
+        // 2. text 버튼 클릭 시 (p태그 안에 있는) 내용만 변경
+
+        // JS 에서는 => .innerText 사용
+        // JQ 에서는 => .text() 사용
+
+        // 내용변경! 으로 바꾸기
+        $('#textBtn').click(() => {  // button 태그 가리키기
+            $('p').text('내용변경!')  // p태그 안에 있는 내용을 텍스트의 내용변경!으로 바꾸겠다
+        })  
+
+        // 3. html 버튼 클릭 시 태그까지 포함해서 변경
+
+        // JS 에서는 => .innerHtml 사용
+        // JQ 에서는 => .html() 사용
+
+        $('#htmlBtn').click(() => {
+            // 기존에는 요소명.innerHtml = '<a  href="#">a태그로 변경</a>'
+            $('p').html('<a href="#">a태그로 변경!</a>')  // <a href=""> 주소값을 정하지 않았다면 "" 안에 # 넣어주기
+        })
+
+    </script>
+</body>
+</html>

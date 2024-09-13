@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 논리연산자
+        // !(NOT) : !(논리) - 논리값을 뒤집는 역할
+        // !true => false
+        // !false => true
+
+        // &&(AND) \\(OR) : 논리&&논리 논리\\논리 - 두 논리가 모두 true일 때 true 반환
+        // * 첫 번째 논리식 결과가 'false'면 다음에 오는 논리식은 검사하지 않는다.
+        // a        b        a&&b
+        // false    false    false   => 첫 번째 논리식이 false라서 검사X
+        // false    true     false   => 첫 번째 논리식이 false라서 검사X
+        // ture     false    false
+        // true     true     true
+
+
+
+        // 조건(삼항) 연산자 : 조건에 따라 다른 결과를 반환하는 연산 기호(유일하게 3개의 피연산자를 가진 기호)
+        // 조건식 ? 실행문장1 : 실행문장2
+        // 조건식이 참(true)이면 => 실행문장1
+        // 조건식이 거짓(false)이면 => 실행문장2
+
+
+        // 삼항연산자 예제
+        // 1) 프롬포트 -> 문자열로 반환 -> 강제 형 변환 -> 변수 안에 담아서 사용
+        let input = parseInt(prompt('숫자를 입력해주세요!'));
+
+        // 2) console.log() -> 변수를 활용해서 삼항연산 만들기
+        // 3) 조건식 ? 실행문장1(true) : 실행문장2(false)
+        console.log(input % 2 === 0 ? input + '은(는) 짝수입니다' : input + '은(는) 홀수입니다');
+
+
+        
+
+</script>
+</body>
+</html>

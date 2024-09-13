@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- window + . : 이모지 -->
+    <h1>🎈Event 지정</h1>
+    <h2>이벤트 확인1</h2>
+    <h3>이벤트 확인2</h3>
+    <p>이벤트 확인3</p>
+    <button>change</button>
+    
+    <script>
+        // h1
+        // 1. 버튼을 클릭했을 때  h1태그 안에 있는 내용 변경됨 -> 글자색은 파란색으로 변경 - click메소드 사용
+        $('button').click(()=>{
+            $('h1').css('color','blue');
+        })
+        // 2. h1태그 안에 있는 내용에 마우스를 올렸을 때 -> 글자색이 빨간색으로 변경 - mouseover 
+        $('h1').mouseover(()=>{
+            $('h1').css('color','red');
+        })
+        // 3. h1태그 안에 있는 내용에 마우스를 내렸을 때 -> 글자색이 검정색으로 변경 - mouseout
+        $('h1').mouseout(()=>{
+            $('h1').css('color','black');
+        })
+
+        // h2, h3
+        // 4. h2, h3 태그 안에 있는 내용을 클릭했을 때 글자색은 노란색으로 변경 - click
+        // 아래의 두 개를 한 번에 쓰는 방법
+        $('h2,h3').click(function(){   // function함수를 쓰면 자동으로 h2,h3를 this키워드를 사용해 반환해줌
+            $(this).css('color','yellow') // this키워드 : 화살표함수에서 사용/적용 불가
+        })
+
+        // $('h2').click(()=>{
+        //     $('h2').css('color','yellow');
+        // })
+        // $('h3').click(()=>{
+        //     $('h3').css('color','yellow');
+        // })
+
+        // p
+        // 5. p태그 변경 => 글자색상, 배경색 변경 - click
+        $('p').click(()=>{
+            $('p').css({
+                'color':'white',
+                'background-color':'orange'
+            })
+        })
+
+
+    </script>
+</body>
+</html>

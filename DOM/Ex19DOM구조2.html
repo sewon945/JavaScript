@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tit">오늘<span><strong>날씨</strong></span>가 매우 덥습니다.</h1>
+    <script>
+        // HTML 요소객체 접근
+        const tit = document.getElementById('tit');   // 소괄호에 id값 넣기
+        console.log('h1요소객체 접근 : ' + tit);
+ 
+        console.log(tit.innerText);  // innerText : 태그 자체를 문자열로 바꿔서 출력
+        console.log(tit.innerHTML);  // innerHTML : 태그도 같이 출력
+
+        // innerHTML : 클릭할 수 있게끔 출력
+        tit.innerHTML = '<a href="#">DOM 구조 배우는 중!</a>'   // a태그가 적용되어 문자열만 출력
+        // tit.innerText = '<a href="#">DOM 구조 배우는 중!</a>'   // a태그 자체를 문자열로 출력
+
+
+    </script>
+</body>
+</html>

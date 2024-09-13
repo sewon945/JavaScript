@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        img{
+            width: 200px;
+        }
+
+        .newClass{
+            border: 5px solid sienna;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid black">
+        <img src="./img/pic1.gif" id="img1">
+    </div>
+    <button id="btn1">div내부 앞에 추가</button>
+    <button id="btn2">div내부 뒤에 추가</button>
+    <button id="btn3">div외부 앞에 추가</button>
+    <button id="btn4">div외부 뒤에 추가</button>
+    <button id="btn5">img 1개 삭제</button>
+    <button id="btn6">div 안 비우기</button>
+    <button id="btn7">class 추가</button>
+    <button id="btn8">class 삭제</button>
+    <button id="btn9">부모요소 접근</button>
+
+    <script>
+
+        // 7. class 추가하기
+        $('#btn7').click(()=>{
+            $('img').addClass('newClass')
+        })
+        
+        // 1. 요소 내부 앞에 내용 추가 : prepend()
+        $('#btn1').click(()=>{
+            $('div').prepend('<span>춘식이<span>')   // div태그 가져와서 img2번 가져오기
+        })
+
+        // $('#btn1').click(()=>{
+        //     $('div').prepend('<img src="./img/pic2.gif">') 
+        // })
+
+
+        // 2. 요소 내부 뒤에 내용 추가 : append()
+        $('#btn2').click(()=>{
+            $('div').append('<img src="./img/pic3.gif">')
+        })
+
+        // 3. 요소 외부 앞에 내용 추가 : before()
+        $('#btn3').click(()=>{
+            $('div').before('<img src="./img/pic4.gif">')
+        })
+
+        // 4. 요소 외부 뒤에 내용 추가 : after()
+        $('#btn4').click(()=>{
+            $('div').after('<img src="./img/pic5.gif">')
+        })
+
+        // 5. 요소 지우기 : remove()
+        $('#btn5').click(()=>{
+            $('#img1').remove()
+        })
+
+        // 6. 요소 비우기 : empty()
+        $('#btn6').click(()=>{
+            $('div').empty()
+        })
+
+        // 7. class 추가하기
+        $('#btn7').click(()=>{
+            $('img').addClass('newClass')
+        })
+
+        // 8. class 삭제하기
+        $('#btn8').click(()=>{
+            $('img').removeClass()
+        })
+
+        // 9. 부모 요소 다루기
+        $('#btn9').click(()=>{
+            $('div > img').parent().css('background-color', 'orange')  // div태그 안에 있는 자식 선택자
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 제어문
+        // : 프로그램의 순차적인 흐름을 제어해야 할 때 사용하는 실행문(조건문, 반복문)
+        // 조건문
+        // 단순 if : 조건식이 참일 때만 실행문장이 동작하는 구문
+        // if~else : 조건식이 참 또는 거짓일 때 실행문장이 동작하는 구문
+
+
+
+        // 실습 - 2와 6의 배수를 구하는 문제
+        // 입력받은 숫자가 2의 배수이면서(and) 6의 배수라면 '2와 6의 배수입니다.'를 출력하고
+        // 조건이 맞지 않다면 '2와 6의 배수가 아닙니다.'를 출력하시오.
+        // 내가 입력한 숫자를 2로 나눴을 때 and 6으로 나웠을 때 - 나머지가 => 0
+        // 조건식 안에 and 연산자 활용 -> 조건 2개가 모두 true일 때 if~else문 사용 -> if문 조건식 설정
+        
+        
+        // if문 작성 방법
+        // if(조건식) {
+            // 조건식 => True 라면 이 부분 실행
+            // console.log('실행문장1 실행');
+        // } else {
+            // 조건식 => False 라면 이 부분 실행
+            // console.log('실행문장2 실행');
+        // }
+
+        let input = parseInt(prompt('숫자를 입력해주세요!'));
+
+        if(input % 2 === 0 && input % 6 === 0) {
+            console.log(input + '은(는) 2와 6의 배수입니다.');
+            console.log(`${input}은(는) 2와 6의 배수입니다.`); 
+            // 템플릿리터럴 : 변수를 더하지 않아도 한 번에 사용 가능 (`` 작은 따옴표가 아니라 물결표시 있는 곳의 역따옴표)
+            // => console.log( ` $ { 변수명 } 실행문장 ` );
+        } else {
+            console.log(input + '은(는) 2와 6의 배수가 아닙니다.');
+        }
+
+
+    </script>
+</body>
+
+</html>

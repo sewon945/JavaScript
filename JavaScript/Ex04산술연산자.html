@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 산술연산자 : +, -, *, /, %
+        let num1 = 11;
+        let num2 = 5;
+        console.log(num1 + num2);    // => 16
+        console.log(num1 - num2);    // => 6
+
+        // /(나누기) : 몫이 아닌 결과값 출력
+        console.log(parseInt(9/2) === 4);  
+        // 비교연산자를 통해 값이 4인지 아닌지 true or false 값으로 나온다
+        // 몫을 사용하려면 정수형태(parseInt)로 바꿔서 사용 가능
+        
+        
+        // 실습(백의 자리 이하를 버린 결과 출력)
+        let num = 315;
+
+        // 방법 1) 몫
+        console.log('백의 자리 이하 버린 결과>> ' + parseInt(num / 100) * 100);
+
+        // 방법 2) 나머지
+        console.log('백의 자리 이하 버린 결과>> ' + (num - num % 100));
+       
+
+        
+
+    </script>
+</body>
+</html>

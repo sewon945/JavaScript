@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputTag">
+    <button onclick="getInput()">클릭</button>
+    <input type="text" id="inputTag2">
+    <button onclick="getInput2()">h1태그 출력</button>
+
+    <script>
+        const getInput = () => {
+            // input태그 접근 -> id값 (메서드) 활용하기 -> (그 메서드) 변수에 담기
+            let inputVal = document.getElementById('inputTag');
+            // alert(요소명(변수).value)
+            alert(inputVal.value)
+        }
+
+        const getInput2 = () => {
+            // input태그 접근 -> id값 활용 -> 변수에 담기
+            let inputVal2 = document.getElementById('inputTag2');
+            // document.write(`h1태그를 포함해서 작성`)
+            document.write(`<h1>${inputVal2.value}</h1>`)
+        }
+
+    </script>
+</body>
+</html>

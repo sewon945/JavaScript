@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoNWJ0i7OTKbVEVQR7bK9Md9n7dRwJIo1Gjw&s" 
+    width="300px" id="imgId" class="imgClass">
+    <br>
+    <button onclick="imgChange()">이미지 변경</button>
+
+    <script>
+        // <img> 태그의 src 속성은 이미지 소스를 명시해주는 것임
+        let src1 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoNWJ0i7OTKbVEVQR7bK9Md9n7dRwJIo1Gjw&s'
+        let src2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgaIONFh4vqFhA3G4r5lJWPUCpA772NSxh3A&s'
+        
+        const imgChange = () => {
+            // 이미지 요소 가져오기
+            let img = document.getElementById('imgId');
+            
+            // src 속성을 비교해서
+            if(img.src === src1) {  // 변경
+                img.src = src2
+            } else { // 아니라면 다시 원상복구
+                img.src = src1;
+            }
+        }
+    
+    </script>
+</body>
+</html>

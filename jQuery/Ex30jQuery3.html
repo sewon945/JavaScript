@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>0</p>
+    <button class="plusNum">+1</button>
+    <button class="minusNum">-1</button>
+    <button class="resetNum">reset</button>
+
+    <script>
+        let num = 0;
+
+        $('.plusNum').click(()=>{
+            num++     // +1씩 증가
+            // p태그에 접근해서 안에 있는 내용 바꾸기 (JS => .innerText / JQ => .text())
+            $('p').text(num);
+        })
+
+        $('.minusNum').click(()=>{
+            // 음수로 변환이 되면 안된다(조건식)
+            if(num > 0) {
+            num--;    // -1씩 감소
+            $('p').text(num);
+            } 
+        })
+
+        $('.resetNum').click(()=>{
+            // 0으로 초기화
+            num = 0;
+            $('p').text(num);
+        })
+    </script>
+
+</body>
+</html>
